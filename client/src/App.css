@@ -1,0 +1,68 @@
+body {
+  background-color: #f1f4f9;
+  font-family: "Nunito", sans-serif !important;
+  font-size: 20px;
+  padding: 0px;
+}
+p {
+  font-family: "Nunito", sans-serif !important;
+}
+
+.hover:hover {
+  cursor: pointer;
+  background-color: #eeeeee !important;
+}
+
+.home-background {
+  background-color: #ffff;
+}
+
+.jobs-background {
+  height: 63.5vh;
+  background-color: #ffff;
+}
+
+.browse-btn {
+  transition: 0.3s;
+}
+
+.browse-btn:hover {
+  transform: scale(1.05);
+}
+.nav-link {
+  transition: 0.1s;
+}
+.nav-link:hover {
+  color: #ffff !important;
+
+  transform: scale(1.02);
+}
+.nav-btn {
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: #b666d2;
+  color: white !important;
+  border: 1px solid #b666d2;
+}
+
+.apply a {
+  visibility: hidden;
+}
+
+#card:hover .apply a {
+  visibility: visible;
+}
+
+.apply a {
+  transition: 0s;
+}
+
+.btn {
+  transition: 0.2s;
+}
+
+.btn:hover {
+  transform: scale(1.03);
+}
