@@ -7,3 +7,5 @@ design
 .gcloudignore
 
 *app.yaml
+
+build

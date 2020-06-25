@@ -120,7 +120,7 @@ const JobItem = ({ job }) => {
             <span className="ml-auto">{categories.slice(0, 3)}</span>
           </div>
 
-          <div className="apply ml-auto my-auto">
+          <div className="apply ml-auto my-auto d-none d-md-block">
             <p className="mt-4 mr-4" style={{ fontSize: "13px" }}>
               <a
                 className="btn btn-primary"
