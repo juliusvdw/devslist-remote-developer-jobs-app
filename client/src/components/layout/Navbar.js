@@ -78,7 +78,7 @@ const Navbar = ({ setContactModalShow, setPostModalShow }) => {
 const navbarStyle = {
   paddingTop: "0px",
   paddingBottom: "5px",
-  backgroundColor: "#343951",
+  backgroundColor: "white",
   borderBottom: "1px solid lightgray",
 };
 
