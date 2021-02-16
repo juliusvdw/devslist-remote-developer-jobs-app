@@ -48,7 +48,7 @@ const Navbar = ({ setContactModalShow, setPostModalShow }) => {
                 </a>
               </div>
             </li>
-            <li className="nav-item mr-4">
+            <li className="nav-item">
               <a
                 className="nav-link text-dark"
                 href="#"
@@ -95,6 +95,8 @@ const logoStyle = {
 
 const btnStyle = {
   marginRight: "70px",
+  borderWidth: "1.5px",
+  fontWeight: "bold",
 };
 
 export default Navbar;

@@ -34,15 +34,6 @@ p {
 .nav-link:hover {
   transform: scale(1.02);
 }
-.nav-btn {
-  transition: 0.3s;
-}
-
-.btn:hover {
-  background-color: #b666d2;
-  color: white !important;
-  border: 1px solid #b666d2;
-}
 
 .apply a {
   visibility: hidden;
@@ -56,10 +47,20 @@ p {
   transition: 0s;
 }
 
-.btn {
-  transition: 0.2s;
-}
+@media only screen and (max-width: 1000px) {
+  .header-main-text {
+    font-size: 24px !important;
+  }
+  .header-sub-text {
+    font-size: 14px !important;
+  }
 
-.btn:hover {
-  transform: scale(1.03);
+  .navbar-nav {
+    margin-left: 15px !important;
+  }
+
+  .nav-btn {
+    margin-right: 20px !important;
+    margin-left: 20px !important;
+  }
 }

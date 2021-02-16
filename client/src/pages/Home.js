@@ -26,7 +26,7 @@ const Home = (props) => {
       <div className="header" style={headerStyle}>
         <div className="container">
           <div className="header-text-container" style={headerTextStyle}>
-            <h1 className="header-text" style={headerMainTextStyle}>
+            <h1 className="header-main-text mb-3" style={headerMainTextStyle}>
               The Latest Remote developer jobs
             </h1>
             <p className="header-sub-text" style={headerSubTextStyle}>
@@ -92,7 +92,7 @@ const inputStyle = {
 
 const headerStyle = {
   paddingTop: "17vh",
-  height: "40vh",
+  height: "42vh",
   backgroundColor: " rgb(233, 238, 250)",
   color: "rgb(2, 27, 156)",
 };
