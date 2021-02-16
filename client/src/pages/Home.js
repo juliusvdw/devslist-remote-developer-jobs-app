@@ -38,7 +38,11 @@ const Home = (props) => {
         </div>
       </div>
 
-      <div className="row ">
+      <div className="searchbox-container container">
+        <SearchBox />
+      </div>
+
+      {/* <div className="row ">
         <div className="col-lg-9 mx-auto" style={jobSectionStyle}>
           <Jobs />
 
@@ -58,7 +62,7 @@ const Home = (props) => {
             </div>
           )}
         </div>
-      </div>
+      </div> */}
       <Footer setContactModalShow={props.setContactModalShow} />
     </div>
   );
