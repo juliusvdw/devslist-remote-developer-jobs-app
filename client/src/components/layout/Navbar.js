@@ -8,7 +8,7 @@ const Navbar = ({ setContactModalShow, setPostModalShow }) => {
         className="navbar navbar-expand-lg navbar-light fixed-top  px-0"
         style={navbarStyle}
       >
-        <Link className="navbar-brand text-white" to="/" style={logoStyle}>
+        <Link className="navbar-brand text-dark" to="/" style={logoStyle}>
           devslist
         </Link>
         <button
@@ -23,15 +23,15 @@ const Navbar = ({ setContactModalShow, setPostModalShow }) => {
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav ml-auto" style={ulStyle}>
+          <ul className="navbar-nav mr-auto" style={ulStyle}>
             <li className="nav-item mr-4">
-              <Link className="nav-link text-white" to="/jobs">
+              <Link className="nav-link text-dark" to="/jobs">
                 Jobs
               </Link>
             </li>
             <li className="nav-item dropdown mr-4">
               <a
-                className="nav-link  text-white"
+                className="nav-link  text-dark"
                 href="#"
                 id="navbarDropdown"
                 role="button"
@@ -50,25 +50,23 @@ const Navbar = ({ setContactModalShow, setPostModalShow }) => {
             </li>
             <li className="nav-item mr-4">
               <a
-                className="nav-link text-white"
+                className="nav-link text-dark"
                 href="#"
                 onClick={() => setContactModalShow(true)}
               >
                 Contact
               </a>
             </li>
-
-            <li className="nav-item mr-4">
-              <a
-                className="nav-link btn btn-outline-primary mt-1 nav-btn"
-                href="#"
-                onClick={() => setPostModalShow(true)}
-                style={btnStyle}
-              >
-                Post Job
-              </a>
-            </li>
           </ul>
+
+          <a
+            className="nav-link btn btn-outline-primary mt-1 nav-btn ml-auto"
+            href="#"
+            onClick={() => setPostModalShow(true)}
+            style={btnStyle}
+          >
+            Post Job
+          </a>
         </div>
       </nav>
     </div>
@@ -76,32 +74,27 @@ const Navbar = ({ setContactModalShow, setPostModalShow }) => {
 };
 
 const navbarStyle = {
-  paddingTop: "0px",
-  paddingBottom: "5px",
+  paddingTop: "10px",
+  paddingBottom: "10px",
   backgroundColor: "white",
   borderBottom: "1px solid lightgray",
 };
 
 const ulStyle = {
-  marginRight: "10%",
+  marginLeft: "5%",
   paddingTop: "5px",
   paddingLeft: "10px",
-  fontSize: "19px",
+  fontSize: "17px",
 };
 
 const logoStyle = {
-  fontSize: "38px",
+  fontSize: "28px",
   fontWeight: "bold",
-  marginLeft: "12%",
+  marginLeft: "5%",
 };
 
 const btnStyle = {
-  color: "white",
-  fontWeight: "bold",
-  width: "120px",
-  paddingTop: "4px",
-  border: "2px solid #ffff",
-  marginLeft: "20%",
+  marginRight: "70px",
 };
 
 export default Navbar;

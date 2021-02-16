@@ -1,11 +1,11 @@
 body {
   background-color: #f1f4f9;
-  font-family: "Nunito", sans-serif !important;
+  font-family: "Open Sans", sans-serif !important;
   font-size: 20px;
   padding: 0px;
 }
 p {
-  font-family: "Nunito", sans-serif !important;
+  font-family: "Open Sans", sans-serif !important;
 }
 
 .hover:hover {
@@ -30,11 +30,8 @@ p {
   transform: scale(1.05);
 }
 .nav-link {
-  transition: 0.1s;
 }
 .nav-link:hover {
-  color: #ffff !important;
-
   transform: scale(1.02);
 }
 .nav-btn {

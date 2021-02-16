@@ -23,66 +23,23 @@ const Home = (props) => {
 
   return (
     <div style={sectionStyle} className="home-background">
-      <div className="row">
-        <div
-          className="col-lg-7 col-md-10 col-sm-10  text-center offset-md-1 mx-auto "
-          style={headingStyle}
-        >
-          <div className="first-left-section mx-auto" style={{ width: "85%" }}>
-            <h1
-              style={{ fontWeight: "bold", fontSize: "4rem" }}
-              className="d-none d-md-block"
-            >
-              Find your next <span style={{ color: "#883aa5" }}>remote</span>{" "}
-              developer job.
+      <div className="header" style={headerStyle}>
+        <div className="container">
+          <div className="header-text-container" style={headerTextStyle}>
+            <h1 className="header-text" style={headerMainTextStyle}>
+              The Latest Remote developer jobs
             </h1>
-            <h1
-              style={{ fontWeight: "bold", fontSize: "3rem" }}
-              className="d-md-none"
-            >
-              Find your next remote developer job.
-            </h1>
-            <p
-              className=" d-none d-md-block"
-              style={{ fontSize: "28px", color: "#24285B" }}
-            >
-              We scan the web so you don't have to.
+            <p className="header-sub-text" style={headerSubTextStyle}>
+              We crawl the web for hundreds of remote developer jobs. You save
+              time and energy finding everything right in one place. Find your
+              next remote job opportuinty on our job board.
             </p>
-
-            <div className="  mt-4 mx-auto " style={inputStyle}>
-              <SearchBox />
-            </div>
           </div>
-        </div>
-        <div
-          className="col-lg-5  d-none d-lg-block"
-          style={{ overflow: "hidden", minHeight: "600px" }}
-        >
-          <img src="art1.svg" style={imageStyle}></img>
         </div>
       </div>
 
       <div className="row ">
         <div className="col-lg-9 mx-auto" style={jobSectionStyle}>
-          <div
-            className="text-center "
-            style={{
-              marginTop: "-40px",
-              color: "#343951",
-              marginBottom: "30px",
-            }}
-          >
-            <h1
-              style={{
-                fontSize: "3rem",
-                color: "#343951",
-                marginBottom: "35px",
-              }}
-              className="d-none d-md-block"
-            >
-              Browse Positions in your favourite tech.
-            </h1>
-          </div>
           <Jobs />
 
           {!loading && (
@@ -131,6 +88,25 @@ const headingStyle = {
 const inputStyle = {
   width: "85%",
   marginBottom: "50px",
+};
+
+const headerStyle = {
+  paddingTop: "17vh",
+  height: "40vh",
+  backgroundColor: " rgb(233, 238, 250)",
+  color: "rgb(2, 27, 156)",
+};
+
+const headerTextStyle = {
+  maxWidth: "521px",
+};
+
+const headerMainTextStyle = {
+  fontSize: "32px",
+  fontWeight: "bold",
+};
+const headerSubTextStyle = {
+  fontSize: "17px",
 };
 
 const jobSectionStyle = {
