@@ -69,3 +69,23 @@ p {
   background-color: rgb(250, 250, 250);
   cursor: pointer;
 }
+
+.footer {
+  background-color: #f2f8ff !important;
+}
+
+/*Jobs section left custom scroll bar */
+.card::-webkit-scrollbar {
+  width: 8px;
+}
+
+.card::-webkit-scrollbar-track {
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+
+.card::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background: rgba(202, 202, 202, 0.8);
+}
