@@ -54,7 +54,7 @@ const Jobs = () => {
 };
 
 const cardStyle = {
-  padding: "15px",
+  padding: "0px",
   overflow: "auto",
   maxHeight: "100%",
 };

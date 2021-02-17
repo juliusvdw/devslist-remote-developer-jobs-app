@@ -11,10 +11,16 @@ const JobItem = ({ job }) => {
   categories = categories.map((cat) => {
     return (
       <span
-        className="badge  badge-light my-1 mx-1  "
-        style={{ fontSize: "13.5px", border: "1px solid black" }}
+        className="badge  badge-light mr-1
+        p-2  "
+        style={{
+          color: "rgb(120,120,120)",
+          fontSize: "11px",
+          border: "0px solid black",
+          borderRadius: "0px",
+        }}
       >
-        <strong>{cat}</strong>
+        {cat}
       </span>
     );
   });
@@ -52,20 +58,34 @@ const JobItem = ({ job }) => {
     "Dev",
   ];
 
-  console.log(date);
-  console.log(now);
   if (date.slice(0, date.indexOf("T")) === now.slice(0, now.indexOf("T"))) {
     date = "Today";
   } else {
     date = date.slice(0, date.indexOf("T"));
     date = date.split("-");
 
-    date = `Posted on ${date[1]}/ ${date[2]}`;
+    date = ` ${date[1]}/ ${date[2]}`;
   }
 
   return (
-    <div style={jobStyle}>
-      <h1>testing</h1>
+    <div style={jobStyle} className="single-job">
+      <div className="cardTop d-flex">
+        <div style={companyLetterStyle} className="p-2 text-center">
+          <h6>{imageLetters}</h6>
+        </div>
+        <h6 className="p-2" style={companyTitleStyle}>
+          {company}
+        </h6>
+        <h6 className="p-2" style={dateStyle}>
+          {date}
+        </h6>
+      </div>
+
+      <div className="card-title mt-2 mb-2">
+        <h5 style={titleStyle}>{title}</h5>
+      </div>
+
+      <div className="categories mb-4">{categories}</div>
     </div>
   );
 };
@@ -88,7 +108,32 @@ const btnStyle = {
 };
 
 const jobStyle = {
+  paddingTop: "20px",
+  paddingLeft: "30px",
+  paddingRight: "30px",
   borderBottom: "1px solid lightgray",
+};
+
+const companyTitleStyle = {
+  fontSize: "14px",
+};
+
+const companyLetterStyle = {
+  fontSize: "12 px",
+  width: "30px",
+  height: "30px",
+  color: "rgb (220,220,220) ",
+  backgroundColor: "rgb(245,245,245)",
+};
+
+const dateStyle = {
+  fontSize: "10px",
+  fontColor: "rgb(250,250,250)",
+};
+
+const titleStyle = {
+  fontSize: "16px",
+  fontWeight: "600",
 };
 
 export default JobItem;

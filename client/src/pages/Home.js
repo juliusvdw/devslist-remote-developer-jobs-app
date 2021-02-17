@@ -107,7 +107,7 @@ const headerSubTextStyle = {
 
 const jobSectionStyle = {
   paddingTop: "15px",
-  height: "70vh",
+  height: "80vh",
 };
 
 const jobSectionBackgroundStyle = {
