@@ -64,7 +64,7 @@ const JobItem = ({ job }) => {
   }
 
   return (
-    <div className="card">
+    <div style={jobStyle}>
       <h1>testing</h1>
     </div>
   );
@@ -85,6 +85,10 @@ const btnStyle = {
   width: "120px",
   backgroundColor: "#b666d2",
   border: "1px solid #b666d2",
+};
+
+const jobStyle = {
+  borderBottom: "1px solid lightgray",
 };
 
 export default JobItem;

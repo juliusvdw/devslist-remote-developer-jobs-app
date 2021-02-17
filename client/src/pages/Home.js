@@ -45,7 +45,9 @@ const Home = (props) => {
       <section style={jobSectionBackgroundStyle}>
         <div className="container" style={jobSectionStyle}>
           <div className="row w-100 h-100">
-            <div className="col-lg-4 bg-dark"></div>
+            <div className="col-lg-4 ">
+              <Jobs style={JobsLeftStyle} />
+            </div>
 
             <div className="col-lg-8  bg-primary"></div>
           </div>
@@ -109,6 +111,10 @@ const jobSectionStyle = {
 const jobSectionBackgroundStyle = {
   height: "80vh",
   backgroundColor: "#f2f8ff",
+};
+
+const JobsLeftStyle = {
+  padding: "30px !important",
 };
 
 export default Home;

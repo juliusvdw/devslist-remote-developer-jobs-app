@@ -18,7 +18,7 @@ const Jobs = () => {
 
   if (allJobs === true && jobs !== null) {
     return (
-      <div>
+      <div className="card" style={cardStyle}>
         {jobs.map((job) => {
           return <JobItem job={job} />;
         })}
@@ -28,7 +28,7 @@ const Jobs = () => {
 
   if (loading === false && homeJobs !== null) {
     return (
-      <div>
+      <div className="card" style={cardStyle}>
         {homeJobs.map((job) => {
           return <JobItem job={job} />;
         })}
@@ -51,6 +51,10 @@ const Jobs = () => {
       </div>
     );
   }
+};
+
+const cardStyle = {
+  padding: "15px",
 };
 
 export default Jobs;
