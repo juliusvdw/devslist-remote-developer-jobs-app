@@ -42,6 +42,16 @@ const Home = (props) => {
         <SearchBox />
       </div>
 
+      <section style={jobSectionBackgroundStyle}>
+        <div className="container" style={jobSectionStyle}>
+          <div className="row w-100 h-100">
+            <div className="col-lg-4 bg-dark"></div>
+
+            <div className="col-lg-8  bg-primary"></div>
+          </div>
+        </div>
+      </section>
+
       {/* <div className="row ">
         <div className="col-lg-9 mx-auto" style={jobSectionStyle}>
           <Jobs />
@@ -72,28 +82,6 @@ const sectionStyle = {
   height: "110vh",
 };
 
-const firstSectionStyle = {
-  height: "40vh",
-};
-
-const imageStyle = {
-  position: "relative",
-
-  marginLeft: "-90px",
-  marginTop: "50px",
-  width: "750px",
-};
-
-const headingStyle = {
-  marginTop: "180px",
-  color: "#24285B",
-};
-
-const inputStyle = {
-  width: "85%",
-  marginBottom: "50px",
-};
-
 const headerStyle = {
   paddingTop: "17vh",
   height: "42vh",
@@ -115,12 +103,12 @@ const headerSubTextStyle = {
 
 const jobSectionStyle = {
   paddingTop: "15px",
+  height: "70vh",
 };
 
-const buttonStyle = {
-  marginTop: "30px",
-  borderWidth: "2px",
-  fontSize: "18px",
+const jobSectionBackgroundStyle = {
+  height: "80vh",
+  backgroundColor: "#f2f8ff",
 };
 
 export default Home;
