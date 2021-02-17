@@ -45,13 +45,13 @@ const Home = (props) => {
       <section style={jobSectionBackgroundStyle}>
         <div className="container" style={jobSectionStyle}>
           <div className="row w-100 ">
-            <div className="col-lg-4 ">
+            <div className="col-lg-5 ">
               <div style={jobsLeftContainerStyle}>
                 <Jobs style={jobsLeftStyle} />
               </div>
             </div>
 
-            <div className="col-lg-8  bg-white"></div>
+            <div className="col-lg-7  bg-white"></div>
           </div>
         </div>
       </section>
@@ -107,11 +107,11 @@ const headerSubTextStyle = {
 
 const jobSectionStyle = {
   paddingTop: "15px",
-  height: "80vh",
+  height: "90vh",
 };
 
 const jobSectionBackgroundStyle = {
-  height: "80vh",
+  height: "90vh",
   backgroundColor: "#f2f8ff",
 };
 
@@ -120,7 +120,8 @@ const jobsLeftStyle = {
 };
 
 const jobsLeftContainerStyle = {
-  height: " 70vh ",
+  height: " 85vh ",
+  width: "97%",
 };
 
 export default Home;

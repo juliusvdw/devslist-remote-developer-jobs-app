@@ -109,6 +109,7 @@ const btnStyle = {
 
 const jobStyle = {
   paddingTop: "20px",
+  paddingBottom: "20px",
   paddingLeft: "30px",
   paddingRight: "30px",
   borderBottom: "1px solid lightgray",
