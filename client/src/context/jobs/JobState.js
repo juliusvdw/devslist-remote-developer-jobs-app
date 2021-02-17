@@ -44,7 +44,7 @@ const JobState = (props) => {
   const getHomePageJobs = async () => {
     try {
       const data = await axios.get(
-        "https://devslistjules.uk.r.appspot.com/api/jobs?limit=10"
+        "https://devslistjules.uk.r.appspot.com/api/jobs?limit=30"
       );
       const jobs = data.data.jobs;
 

@@ -55,6 +55,8 @@ const Jobs = () => {
 
 const cardStyle = {
   padding: "15px",
+  overflow: "auto",
+  maxHeight: "100%",
 };
 
 export default Jobs;
