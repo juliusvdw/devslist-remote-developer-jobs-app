@@ -74,8 +74,8 @@ const Navbar = ({ setContactModalShow, setPostModalShow }) => {
 };
 
 const navbarStyle = {
-  paddingTop: "10px",
-  paddingBottom: "10px",
+  paddingTop: "7px",
+  paddingBottom: "7px",
   backgroundColor: "white",
   borderBottom: "1px solid lightgray",
 };
@@ -84,11 +84,11 @@ const ulStyle = {
   marginLeft: "5%",
   paddingTop: "5px",
   paddingLeft: "10px",
-  fontSize: "17px",
+  fontSize: "16px",
 };
 
 const logoStyle = {
-  fontSize: "28px",
+  fontSize: "24px",
   fontWeight: "bold",
   marginLeft: "5%",
 };
