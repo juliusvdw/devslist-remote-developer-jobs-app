@@ -85,7 +85,7 @@ const JobItem = ({ job }) => {
         <h5 style={titleStyle}>{title}</h5>
       </div>
 
-      <div className="categories mb-4">{categories}</div>
+      <div className="categories mb-3 mt-3">{categories}</div>
     </div>
   );
 };

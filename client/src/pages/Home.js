@@ -45,7 +45,7 @@ const Home = (props) => {
       <section style={jobSectionBackgroundStyle}>
         <div className="container" style={jobSectionStyle}>
           <div className="row w-100 ">
-            <div className="col-lg-5 ">
+            <div className="col-lg-5 col-sm-12 mx-auto">
               <div style={jobsLeftContainerStyle}>
                 <Jobs style={jobsLeftStyle} />
               </div>
@@ -121,7 +121,7 @@ const jobsLeftStyle = {
 
 const jobsLeftContainerStyle = {
   height: " 85vh ",
-  width: "97%",
+  width: "100%",
 };
 
 export default Home;

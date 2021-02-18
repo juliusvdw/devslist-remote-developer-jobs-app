@@ -33,7 +33,7 @@ const SearchBox = (props) => {
     <div>
       <div className="mt-4">
         <form onSubmit={onSubmit}>
-          <div className="input-group ">
+          <div className="input-group search-input ">
             <div className="input mb-3  " style={inputStyle}>
               <input
                 type="text"

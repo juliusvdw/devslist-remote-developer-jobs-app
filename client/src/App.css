@@ -32,7 +32,9 @@ p {
 .nav-link {
 }
 .nav-link:hover {
-  transform: scale(1.02);
+  color: black;
+
+  font-weight: bold;
 }
 
 .apply a {
@@ -88,4 +90,10 @@ p {
   -webkit-border-radius: 10px;
   border-radius: 10px;
   background: rgba(202, 202, 202, 0.8);
+}
+
+@media only screen and (max-width: 600px) {
+  .search-input {
+    width: "100%";
+  }
 }

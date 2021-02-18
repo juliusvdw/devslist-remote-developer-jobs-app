@@ -42,11 +42,6 @@ const Navbar = ({ setContactModalShow, setPostModalShow }) => {
               >
                 Join
               </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">
-                  Slack community
-                </a>
-              </div>
             </li>
             <li className="nav-item">
               <a
@@ -84,7 +79,7 @@ const ulStyle = {
   marginLeft: "5%",
   paddingTop: "5px",
   paddingLeft: "10px",
-  fontSize: "16px",
+  fontSize: "15px",
 };
 
 const logoStyle = {
