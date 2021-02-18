@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import Accordion from "react-bootstrap/Accordion";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 
+import JobContext from "../../context/jobs/jobContext";
+
 const JobItem = ({ job }) => {
-  let { link, title, categories, date, description, company, source } = job;
+  const jobContext = useContext(JobContext);
+  const { setActiveJob } = jobContext;
+  let { link, title, categories, date, description, company, source, id } = job;
 
   //manipulate categories display
 
@@ -68,7 +72,11 @@ const JobItem = ({ job }) => {
   }
 
   return (
-    <div style={jobStyle} className="single-job">
+    <div
+      style={jobStyle}
+      className="single-job"
+      onClick={() => setActiveJob(id)}
+    >
       <div className="cardTop d-flex">
         <div style={companyLetterStyle} className="p-2 text-center">
           <h6>{imageLetters}</h6>

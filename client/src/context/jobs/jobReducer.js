@@ -8,6 +8,7 @@ import {
   ALL_JOBS_SKIP,
   CLEAR_ALL_JOBS,
   ADD_HOME_JOBS,
+  SET_ACTIVE_JOB,
 } from "../Types";
 
 export default (state, action) => {
@@ -50,6 +51,11 @@ export default (state, action) => {
         ...state,
         allJobs: false,
         homeJobs: [...state.homeJobs, ...action.payload],
+      };
+    case SET_ACTIVE_JOB:
+      return {
+        ...state,
+        activeJob: action.payload,
       };
     case SET_ALL_JOBS:
       return {

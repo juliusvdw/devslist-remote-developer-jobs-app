@@ -1,4 +1,4 @@
-import React from "react";
+import { React } from "react";
 
 const JobDetails = () => {
   return <h1>Testing</h1>;

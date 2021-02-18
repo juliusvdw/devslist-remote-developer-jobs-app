@@ -14,6 +14,7 @@ import {
   CLEAR_ALL_JOBS,
   ALL_JOBS_SKIP,
   ADD_HOME_JOBS,
+  SET_ACTIVE_JOB,
 } from "../Types";
 
 const JobState = (props) => {
@@ -22,6 +23,7 @@ const JobState = (props) => {
     homeJobs: null,
     jobs: null,
     allJobs: false,
+    activeJob: null,
     loading: true,
   };
 
@@ -124,6 +126,13 @@ const JobState = (props) => {
       console.log(err);
     }
   };
+
+  //Set active job to display in Job DEtails section
+
+  const setActiveJob = (jobId) => {
+    console.log(jobId);
+    dispatch({ type: SET_ACTIVE_JOB, payload: jobId });
+  };
   //We return the provider , we wrap our whole application in this
   return (
     <JobContext.Provider
@@ -140,6 +149,7 @@ const JobState = (props) => {
         clearAllJobs,
         allJobsSkip,
         addHomeJobs,
+        setActiveJob,
       }}
     >
       {props.children}
