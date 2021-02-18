@@ -2,6 +2,7 @@ import React, { useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
 import SearchBox from "../components/search/SearchBox";
 import Jobs from "../components/jobs/Jobs";
+import JobDetails from "../components/jobs/JobDetails";
 import JobContext from "../context/jobs/jobContext";
 import Footer from "../components/layout/Footer";
 
@@ -51,7 +52,10 @@ const Home = (props) => {
               </div>
             </div>
 
-            <div className="col-lg-7  bg-white"></div>
+            <div className="col-lg-7  bg-white">
+              {" "}
+              <JobDetails />
+            </div>
           </div>
         </div>
       </section>
