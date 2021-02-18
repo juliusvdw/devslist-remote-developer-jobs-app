@@ -19,7 +19,7 @@ const Home = (props) => {
   } = jobContext;
 
   useEffect(() => {
-    getHomePageJobs();
+    getAllJobs();
   }, []);
 
   return (
