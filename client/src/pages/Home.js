@@ -16,9 +16,11 @@ const Home = (props) => {
     setLoading,
     loading,
     getAllJobs,
+
+    activeJob,
   } = jobContext;
 
-  useEffect(() => {
+  useEffect(async () => {
     getAllJobs();
   }, []);
 
@@ -53,7 +55,6 @@ const Home = (props) => {
             </div>
 
             <div className="col-lg-7  bg-white">
-              {" "}
               <JobDetails />
             </div>
           </div>

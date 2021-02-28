@@ -129,12 +129,16 @@ const JobState = (props) => {
 
   //Set active job to display in Job DEtails section
 
-  const setActiveJob = (jobId) => {
+  const setActiveJob = async (jobId) => {
     const activeJob = state.jobs.filter((job) => {
       return job.id == jobId;
     });
 
-    dispatch({ type: SET_ACTIVE_JOB, payload: activeJob[0] });
+    try {
+      dispatch({ type: SET_ACTIVE_JOB, payload: activeJob[0] });
+    } catch (error) {
+      console.log(error);
+    }
   };
   //We return the provider , we wrap our whole application in this
   return (
@@ -145,6 +149,7 @@ const JobState = (props) => {
         allJobs: state.allJobs,
         jobs: state.jobs,
         loading: state.loading,
+        activeJob: state.activeJob,
         getHomePageJobs,
         getSearchJobs,
         setLoading,
