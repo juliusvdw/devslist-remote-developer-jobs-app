@@ -64,27 +64,6 @@ const Home = (props) => {
         </div>
       </section>
 
-      {/* <div className="row ">
-        <div className="col-lg-9 mx-auto" style={jobSectionStyle}>
-          <Jobs />
-
-          {!loading && (
-            <div className="w-75 text-center mx-auto">
-              <div className=" mt-4 mb-4">
-                <Link to="/jobs" onClick={() => getAllJobs()}>
-                  {" "}
-                  <button
-                    className="btn btn-lg btn-outline-primary browse-btn"
-                    style={buttonStyle}
-                  >
-                    Browse All Jobs
-                  </button>{" "}
-                </Link>
-              </div>
-            </div>
-          )}
-        </div>
-      </div> */}
       <Footer setContactModalShow={props.setContactModalShow} />
     </div>
   );
