@@ -45,7 +45,7 @@ const JobDetails = () => {
 
       <div className="job-categories">{categories}</div>
 
-      <hr className="mt-4" />
+      <hr className="mt-4 mb-4" />
 
       <div
         className="job-description"

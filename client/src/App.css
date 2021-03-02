@@ -49,6 +49,22 @@ p {
   transition: 0s;
 }
 
+.job-description {
+  font-size: 14px;
+}
+.job-description img {
+  display: none;
+}
+
+.job-description h1 {
+  font-size: 18px !important;
+  font-weight: bold;
+}
+.job-description .h3 {
+  font-size: 18px !important;
+  font-weight: bold;
+}
+
 @media only screen and (max-width: 1000px) {
   .header-main-text {
     font-size: 24px !important;

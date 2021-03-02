@@ -15,9 +15,10 @@ const JobItem = ({ job }) => {
   categories = categories.map((cat) => {
     return (
       <span
-        className="badge  badge-light mr-1
+        className="badge   mr-1
         p-2  "
         style={{
+          backgroundColor: "rgb(240,240,240)",
           color: "rgb(120,120,120)",
           fontSize: "11px",
           border: "0px solid black",
