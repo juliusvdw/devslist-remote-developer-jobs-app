@@ -7,7 +7,7 @@ import JobContext from "../../context/jobs/jobContext";
 
 const JobItem = ({ job }) => {
   const jobContext = useContext(JobContext);
-  const { setActiveJob } = jobContext;
+  const { setActiveJob, activeJob } = jobContext;
   let { link, title, categories, date, description, company, source, id } = job;
 
   //manipulate categories display
@@ -49,19 +49,6 @@ const JobItem = ({ job }) => {
 
   //Manipulate date
   let now = new Date().toISOString();
-  let months = [
-    "Jan",
-    "Feb",
-    "March",
-    "April",
-    "May",
-    "June",
-    "July",
-    "Aug",
-    "Oct",
-    "Nov",
-    "Dev",
-  ];
 
   if (date.slice(0, date.indexOf("T")) === now.slice(0, now.indexOf("T"))) {
     date = "Today";
@@ -72,13 +59,17 @@ const JobItem = ({ job }) => {
     date = ` ${date[1]}/ ${date[2]}`;
   }
 
+  //Add class selected-job to selected job
+
   return (
     <div
       style={jobStyle}
-      className="single-job"
+      className={`single-job ${
+        (activeJob.id != null) & (activeJob.id == id) ? "selected-job" : ""
+      }`}
       onClick={() => setActiveJob(id)}
     >
-      <div className="cardTop d-flex">
+      <div className="card-top d-flex">
         <div style={companyLetterStyle} className="p-2 text-center">
           <h6>{imageLetters}</h6>
         </div>
