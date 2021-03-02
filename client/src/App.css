@@ -64,6 +64,20 @@ p {
   font-size: 18px !important;
   font-weight: bold;
 }
+.job-description p ul {
+  margin: 0px;
+}
+
+.selected-job {
+  border-left: 5px solid rgb(12, 117, 236);
+  border-top: 1px solid rgb(12, 117, 236);
+  border-bottom: 1px solid rgb(12, 117, 236) !important;
+}
+
+.search-input-field:hover {
+  background-color: rgb(248, 248, 248) !important;
+  border-bottom: 2px solid gray !important;
+}
 
 @media only screen and (max-width: 1000px) {
   .header-main-text {

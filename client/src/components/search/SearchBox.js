@@ -37,7 +37,7 @@ const SearchBox = (props) => {
             <div className="input mb-3  " style={inputStyle}>
               <input
                 type="text"
-                className="form-control   "
+                className="form-control search-input-field   "
                 placeholder="Search by key words..."
                 aria-label="key words"
                 aria-describedby="basic-addon2"
