@@ -4,6 +4,8 @@ export const CLEAR_ALL_JOBS = "CLEAR_ALL_JOBS";
 export const ALL_JOBS_SKIP = "ALL_JOBS_SKIP";
 export const ADD_HOME_JOBS = "ADD_HOME_JOBS";
 export const SET_ACTIVE_JOB = "SET_ACTIVE_JOB";
+export const SET_JOB_LOADING = "SET_JOB_LOADING";
+export const CLEAR_JOB_LOADING = "CLEAR_JOB_LOADING";
 
 export const GET_ALL_JOBS = "GET_ALL_JOBS";
 export const SET_LOADING = "SET_LOADING";

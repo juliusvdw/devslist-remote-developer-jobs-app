@@ -16,6 +16,8 @@ const Home = (props) => {
     setLoading,
     loading,
     getAllJobs,
+    jobs,
+    setActiveJob,
 
     activeJob,
   } = jobContext;

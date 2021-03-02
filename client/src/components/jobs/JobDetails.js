@@ -5,7 +5,7 @@ import JobContext from "../../context/jobs/jobContext";
 const JobDetails = () => {
   const jobContext = useContext(JobContext);
 
-  const { activeJob } = jobContext;
+  const { activeJob, jobLoading } = jobContext;
 
   //manipulate categories display
 
@@ -24,7 +24,7 @@ const JobDetails = () => {
       );
     });
 
-  return activeJob != null ? (
+  return (jobLoading == false) & (activeJob != null) ? (
     <div className="container " style={containerStyle}>
       <div className="job-title-row d-flex flex-row" style={jobRowStyle}>
         <div className="letter-logo-container pt-2" style={letterLogoStyle}>

@@ -9,6 +9,8 @@ import {
   CLEAR_ALL_JOBS,
   ADD_HOME_JOBS,
   SET_ACTIVE_JOB,
+  SET_JOB_LOADING,
+  CLEAR_JOB_LOADING,
 } from "../Types";
 
 export default (state, action) => {
@@ -62,6 +64,16 @@ export default (state, action) => {
         ...state,
         allJobs: true,
         searchJobs: null,
+      };
+    case SET_JOB_LOADING:
+      return {
+        ...state,
+        jobLoading: true,
+      };
+    case CLEAR_JOB_LOADING:
+      return {
+        ...state,
+        jobLoading: false,
       };
 
     case CLEAR_LOADING:

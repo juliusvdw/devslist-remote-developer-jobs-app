@@ -65,7 +65,7 @@ const JobItem = ({ job }) => {
     <div
       style={jobStyle}
       className={`single-job ${
-        (activeJob.id != null) & (activeJob.id == id) ? "selected-job" : ""
+        activeJob != null && activeJob.id == id ? "selected-job" : ""
       }`}
       onClick={() => setActiveJob(id)}
     >

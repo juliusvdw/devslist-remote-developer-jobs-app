@@ -15,6 +15,8 @@ import {
   ALL_JOBS_SKIP,
   ADD_HOME_JOBS,
   SET_ACTIVE_JOB,
+  CLEAR_JOB_LOADING,
+  SET_JOB_LOADING,
 } from "../Types";
 
 const JobState = (props) => {
@@ -25,6 +27,7 @@ const JobState = (props) => {
     allJobs: false,
     activeJob: null,
     loading: true,
+    jobLoading: false,
   };
 
   const [state, dispatch] = useReducer(JobReducer, initialState);
@@ -89,10 +92,12 @@ const JobState = (props) => {
         dispatch({ type: SET_ALL_JOBS });
 
         console.log(jobs);
-        dispatch({
+        await dispatch({
           type: GET_ALL_JOBS,
           payload: jobs,
         });
+
+        await dispatch({ type: SET_ACTIVE_JOB, payload: jobs[0] });
         clearLoading();
       } catch (err) {
         console.log(err.message);
@@ -130,6 +135,8 @@ const JobState = (props) => {
   //Set active job to display in Job DEtails section
 
   const setActiveJob = async (jobId) => {
+    setJobLoading();
+
     const activeJob = state.jobs.filter((job) => {
       return job.id == jobId;
     });
@@ -140,6 +147,16 @@ const JobState = (props) => {
       console.log(error);
     }
   };
+
+  //Set job loading for UX purposes
+  const setJobLoading = async () => {
+    await dispatch({ type: SET_JOB_LOADING });
+
+    setTimeout(() => {
+      dispatch({ type: CLEAR_JOB_LOADING });
+    }, 2000);
+  };
+
   //We return the provider , we wrap our whole application in this
   return (
     <JobContext.Provider
@@ -150,6 +167,7 @@ const JobState = (props) => {
         jobs: state.jobs,
         loading: state.loading,
         activeJob: state.activeJob,
+        jobLoading: state.jobLoading,
         getHomePageJobs,
         getSearchJobs,
         setLoading,
