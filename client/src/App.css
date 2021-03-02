@@ -91,6 +91,21 @@ p {
   border-radius: 10px;
   background: rgba(202, 202, 202, 0.8);
 }
+/*Jobs section right custom scroll bar */
+.jobs-right::-webkit-scrollbar {
+  width: 8px;
+}
+
+.jobs-right::-webkit-scrollbar-track {
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+
+.jobs-right::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background: rgba(202, 202, 202, 0.8);
+}
 
 @media only screen and (max-width: 600px) {
   .search-input {

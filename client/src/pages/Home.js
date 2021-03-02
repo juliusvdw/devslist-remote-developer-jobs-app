@@ -20,7 +20,7 @@ const Home = (props) => {
     activeJob,
   } = jobContext;
 
-  useEffect(async () => {
+  useEffect(() => {
     getAllJobs();
   }, []);
 
@@ -48,13 +48,16 @@ const Home = (props) => {
       <section style={jobSectionBackgroundStyle}>
         <div className="container" style={jobSectionStyle}>
           <div className="row w-100 ">
-            <div className="col-lg-5 col-sm-12 mx-auto">
+            <div className="col-lg-4 col-sm-12 mx-auto">
               <div style={jobsLeftContainerStyle}>
                 <Jobs style={jobsLeftStyle} />
               </div>
             </div>
 
-            <div className="col-lg-7  bg-white">
+            <div
+              className=" jobs-right col-lg-8  bg-white "
+              style={jobsRightContainerStyle}
+            >
               <JobDetails />
             </div>
           </div>
@@ -127,6 +130,10 @@ const jobsLeftStyle = {
 const jobsLeftContainerStyle = {
   height: " 85vh ",
   width: "100%",
+};
+const jobsRightContainerStyle = {
+  overflow: "auto",
+  height: "85vh",
 };
 
 export default Home;
