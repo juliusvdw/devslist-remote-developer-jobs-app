@@ -1,4 +1,5 @@
 import React, { useContext, useEffect } from "react";
+import SkeletonLoader from "../SkeletonLoader";
 
 import JobContext from "../../context/jobs/jobContext";
 
@@ -53,7 +54,7 @@ const JobDetails = () => {
       ></div>
     </div>
   ) : (
-    <h1>Loading</h1>
+    <SkeletonLoader />
   );
 };
 

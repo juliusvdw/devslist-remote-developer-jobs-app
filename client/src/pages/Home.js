@@ -50,14 +50,14 @@ const Home = (props) => {
       <section style={jobSectionBackgroundStyle}>
         <div className="container" style={jobSectionStyle}>
           <div className="row w-100 ">
-            <div className="col-lg-4 col-sm-12 mx-auto">
+            <div className="col-lg-5 col-sm-12 mx-auto">
               <div style={jobsLeftContainerStyle}>
                 <Jobs style={jobsLeftStyle} />
               </div>
             </div>
 
             <div
-              className=" jobs-right col-lg-8  bg-white "
+              className=" jobs-right col-lg-7  bg-white "
               style={jobsRightContainerStyle}
             >
               <JobDetails />
