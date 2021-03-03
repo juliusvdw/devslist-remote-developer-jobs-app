@@ -24,8 +24,6 @@ const SearchBox = (props) => {
     setLoading();
     clearAllJobs();
 
-    history.push("/jobs");
-
     getSearchJobs(searchValue.current);
   };
 
