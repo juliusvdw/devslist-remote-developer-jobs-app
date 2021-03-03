@@ -37,7 +37,7 @@ const Jobs = () => {
   }
   if (searchJobs !== null && loading === false) {
     return (
-      <div>
+      <div className="card" style={cardStyle}>
         {searchJobs.length < 1 ? (
           <div className="text-center">
             {" "}

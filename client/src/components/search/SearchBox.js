@@ -22,7 +22,6 @@ const SearchBox = (props) => {
     e.preventDefault();
 
     setLoading();
-    clearAllJobs();
 
     getSearchJobs(searchValue.current);
   };

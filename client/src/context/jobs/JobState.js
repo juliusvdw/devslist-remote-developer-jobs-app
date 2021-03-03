@@ -137,9 +137,17 @@ const JobState = (props) => {
   const setActiveJob = async (jobId) => {
     setJobLoading();
 
-    const activeJob = state.jobs.filter((job) => {
-      return job.id == jobId;
-    });
+    let activeJob;
+
+    if (state.searchJobs == null) {
+      activeJob = state.jobs.filter((job) => {
+        return job.id == jobId;
+      });
+    } else {
+      activeJob = state.searchJobs.filter((job) => {
+        return job.id == jobId;
+      });
+    }
 
     try {
       dispatch({ type: SET_ACTIVE_JOB, payload: activeJob[0] });
