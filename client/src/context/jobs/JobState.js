@@ -17,6 +17,7 @@ import {
   SET_ACTIVE_JOB,
   CLEAR_JOB_LOADING,
   SET_JOB_LOADING,
+  CLEAR_SEARCH_JOBS,
 } from "../Types";
 
 const JobState = (props) => {
@@ -156,6 +157,11 @@ const JobState = (props) => {
     }
   };
 
+  //clear Search jobs
+  const clearSearchJobs = () => {
+    dispatch({ type: CLEAR_SEARCH_JOBS });
+  };
+
   //Set job loading for UX purposes
   const setJobLoading = async () => {
     await dispatch({ type: SET_JOB_LOADING });
@@ -184,6 +190,7 @@ const JobState = (props) => {
         allJobsSkip,
         addHomeJobs,
         setActiveJob,
+        clearSearchJobs,
       }}
     >
       {props.children}
