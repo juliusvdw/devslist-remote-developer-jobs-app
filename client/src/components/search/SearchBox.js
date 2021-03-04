@@ -12,22 +12,30 @@ const SearchBox = (props) => {
 
   let searchValue = useRef("");
 
+  //Select search input to manipulate
+  const searchInput = document.querySelector("#search-input");
+
+  //Change search value on input change
   const onChange = (e) => {
     searchValue.current = e.target.value;
-
-    console.log(searchValue);
   };
 
+  //Logic for form submission
   const onSubmit = async (e) => {
     e.preventDefault();
+
+    searchInput.value = "";
 
     setLoading();
 
     getSearchJobs(searchValue.current);
   };
 
+  //Clear search results
+  const clearSearch = () => {};
+
   return (
-    <div>
+    <div className="mb-2">
       <div className="mt-4">
         <form onSubmit={onSubmit}>
           <div className="input-group search-input ">
@@ -42,6 +50,7 @@ const SearchBox = (props) => {
                 style={searchStyle}
                 name="searchValue"
                 required
+                id="search-input"
               ></input>
             </div>
 
@@ -56,6 +65,9 @@ const SearchBox = (props) => {
             </div>
           </div>
         </form>
+      </div>
+      <div className="badge bg-primary p-2 text-light " style={badgeStyle}>
+        {searchValue.current}
       </div>
     </div>
   );
@@ -75,6 +87,10 @@ const searchStyle = {
 
 const btnStyle = {
   width: "150px",
+};
+
+const badgeStyle = {
+  fontSize: "13px",
 };
 
 export default SearchBox;
