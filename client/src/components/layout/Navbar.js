@@ -72,7 +72,7 @@ const navbarStyle = {
   paddingTop: "7px",
   paddingBottom: "7px",
   backgroundColor: "white",
-  borderBottom: "1px solid lightgray",
+  borderBottom: "2px solid rgb(240,240,240)",
 };
 
 const ulStyle = {
