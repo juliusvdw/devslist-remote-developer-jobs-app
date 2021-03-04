@@ -102,6 +102,9 @@ p {
   cursor: pointer;
 }
 
+#clear-btn:hover {
+  cursor: pointer;
+}
 .footer {
   background-color: #f2f8ff !important;
 }

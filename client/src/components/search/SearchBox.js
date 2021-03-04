@@ -8,7 +8,7 @@ const SearchBox = (props) => {
 
   const jobContext = useContext(JobContext);
 
-  const { getSearchJobs, setLoading, clearAllJobs } = jobContext;
+  const { getSearchJobs, setLoading, clearAllJobs, searchJobs } = jobContext;
 
   let searchValue = useRef("");
 
@@ -66,9 +66,20 @@ const SearchBox = (props) => {
           </div>
         </form>
       </div>
-      <div className="badge bg-primary p-2 text-light " style={badgeStyle}>
-        {searchValue.current}
-      </div>
+
+      {searchJobs && (
+        <div className="categories-badge-container d-flex flex-row">
+          <div className="badge bg-primary p-2 text-light " style={badgeStyle}>
+            {searchValue.current}
+          </div>
+
+          <div className="pl-1" style={clearBtnContainerStyle}>
+            <span id="clear-btn" style={clearBtnStyle}>
+              x
+            </span>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
@@ -91,6 +102,18 @@ const btnStyle = {
 
 const badgeStyle = {
   fontSize: "13px",
+};
+
+const clearBtnContainerStyle = {
+  position: "relative",
+};
+
+const clearBtnStyle = {
+  color: "rgb(190,190,190)",
+  fontWeight: "bold",
+  fontSize: "14px",
+  position: "relative",
+  top: "-12px",
 };
 
 export default SearchBox;
