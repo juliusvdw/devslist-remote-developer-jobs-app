@@ -36,7 +36,7 @@ const SearchBox = (props) => {
 
   return (
     <div className="mb-2">
-      <div className="mt-4">
+      <div className="pt-3">
         <form onSubmit={onSubmit}>
           <div className="input-group search-input ">
             <div className="input mb-3  " style={inputStyle}>
@@ -68,8 +68,11 @@ const SearchBox = (props) => {
       </div>
 
       {searchJobs && (
-        <div className="categories-badge-container d-flex flex-row">
-          <div className="badge bg-primary p-2 text-light " style={badgeStyle}>
+        <div className="categories-badge-container d-flex flex-row ">
+          <div
+            className="badge bg-primary p-2 text-light mb-2 "
+            style={badgeStyle}
+          >
             {searchValue.current}
           </div>
 

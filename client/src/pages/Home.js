@@ -43,8 +43,10 @@ const Home = (props) => {
         </div>
       </div>
 
-      <div className="searchbox-container container">
-        <SearchBox />
+      <div className="searchbox-section" style={searchboxSectionStyle}>
+        <div className="searchbox-container container">
+          <SearchBox />
+        </div>
       </div>
 
       <section style={jobSectionBackgroundStyle}>
@@ -66,7 +68,7 @@ const Home = (props) => {
         </div>
       </section>
 
-      <Footer setContactModalShow={props.setContactModalShow} />
+      {/* <Footer setContactModalShow={props.setContactModalShow} /> */}
     </div>
   );
 };
@@ -101,7 +103,7 @@ const jobSectionStyle = {
 
 const jobSectionBackgroundStyle = {
   height: "90vh",
-  backgroundColor: "#f2f8ff",
+  backgroundColor: "rgb(245, 247, 251",
 };
 
 const jobsLeftStyle = {
@@ -115,6 +117,15 @@ const jobsLeftContainerStyle = {
 const jobsRightContainerStyle = {
   overflow: "auto",
   height: "85vh",
+};
+
+const searchboxSectionStyle = {
+  position: "sticky",
+  top: "59px",
+  zIndex: "999",
+  backgroundColor: "white",
+  minHeight: "70px",
+  borderBottom: "2px solid rgb(240,240,240)",
 };
 
 export default Home;
