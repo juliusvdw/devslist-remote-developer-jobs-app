@@ -79,6 +79,7 @@ export default (state, action) => {
     case CLEAR_SEARCH_JOBS:
       return {
         ...state,
+        allJobs: true,
         searchJobs: null,
       };
 

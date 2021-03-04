@@ -8,7 +8,13 @@ const SearchBox = (props) => {
 
   const jobContext = useContext(JobContext);
 
-  const { getSearchJobs, setLoading, clearAllJobs, searchJobs } = jobContext;
+  const {
+    getSearchJobs,
+    setLoading,
+    clearAllJobs,
+    searchJobs,
+    clearSearchJobs,
+  } = jobContext;
 
   let searchValue = useRef("");
 
@@ -77,7 +83,11 @@ const SearchBox = (props) => {
           </div>
 
           <div className="pl-1" style={clearBtnContainerStyle}>
-            <span id="clear-btn" style={clearBtnStyle}>
+            <span
+              id="clear-btn"
+              style={clearBtnStyle}
+              onClick={() => clearSearchJobs()}
+            >
               x
             </span>
           </div>
