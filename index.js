@@ -37,7 +37,7 @@ app.get("/api/jobs", async (req, res) => {
         .sort("-date");
     }
     if (req.query.all) {
-      jobs = await Job.find({}).lean().limit(100).sort("-date");
+      jobs = await Job.find({}).lean().limit(400).sort("-date");
     }
 
     if (req.query.skip) {
