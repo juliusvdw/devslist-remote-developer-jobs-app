@@ -37,9 +37,6 @@ const SearchBox = (props) => {
     getSearchJobs(searchValue.current);
   };
 
-  //Clear search results
-  const clearSearch = () => {};
-
   return (
     <div className="mb-2">
       <div className="pt-3">
@@ -62,7 +59,7 @@ const SearchBox = (props) => {
 
             <div className="mr-auto">
               <button
-                className="btn btn-primary ml-4 "
+                className="btn btn-outline-primary ml-4 "
                 type="submit"
                 style={btnStyle}
               >

@@ -49,7 +49,7 @@ const Home = (props) => {
         </div>
       </div>
 
-      <section style={jobSectionBackgroundStyle}>
+      <section style={jobSectionBackgroundStyle} className="pt-2">
         <div className="container" style={jobSectionStyle}>
           <div className="row w-100 ">
             <div className="col-lg-5 col-sm-12 mx-auto">
@@ -102,7 +102,7 @@ const jobSectionStyle = {
 };
 
 const jobSectionBackgroundStyle = {
-  height: "80vh",
+  height: "82vh",
   backgroundColor: "rgb(245, 247, 251",
 };
 
