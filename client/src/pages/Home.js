@@ -98,11 +98,11 @@ const headerSubTextStyle = {
 
 const jobSectionStyle = {
   paddingTop: "15px",
-  height: "90vh",
+  height: "80vh",
 };
 
 const jobSectionBackgroundStyle = {
-  height: "90vh",
+  height: "80vh",
   backgroundColor: "rgb(245, 247, 251",
 };
 
@@ -111,12 +111,12 @@ const jobsLeftStyle = {
 };
 
 const jobsLeftContainerStyle = {
-  height: " 85vh ",
+  height: " 80vh ",
   width: "100%",
 };
 const jobsRightContainerStyle = {
   overflow: "auto",
-  height: "85vh",
+  height: "80vh",
 };
 
 const searchboxSectionStyle = {
