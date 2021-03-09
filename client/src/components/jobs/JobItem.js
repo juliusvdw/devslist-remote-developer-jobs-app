@@ -70,22 +70,27 @@ const JobItem = ({ job }) => {
       onClick={() => setActiveJob(id)}
     >
       <div className="card-top d-flex">
-        <div style={companyLetterStyle} className="p-2 text-center">
+        <div
+          style={companyLetterStyle}
+          className="p-2 text-center d-none d-md-block"
+        >
           <h6>{imageLetters}</h6>
         </div>
-        <h6 className="p-2" style={companyTitleStyle}>
+        <h6 className="p-2 company-name" style={companyTitleStyle}>
           {company}
         </h6>
-        <h6 className="p-2" style={dateStyle}>
+        <h6 className="p-2 job-date" style={dateStyle}>
           {date}
         </h6>
       </div>
 
-      <div className="card-title mt-2 mb-2">
-        <h5 style={titleStyle}>{title}</h5>
+      <div className="card-title mt-2 mb-2 ">
+        <h5 className="job-title" style={titleStyle}>
+          {title}
+        </h5>
       </div>
 
-      <div className="categories mb-3 mt-3">{categories}</div>
+      <div className="categories mb-3 mt-3">{categories.slice(0, 3)}</div>
     </div>
   );
 };
