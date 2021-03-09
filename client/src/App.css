@@ -141,7 +141,11 @@ p {
 }
 
 @media only screen and (max-width: 600px) {
-  .search-input {
-    width: "100%";
+  .search-input-field {
+    width: 100%;
+  }
+
+  .searh-input {
+    width: 100%;
   }
 }

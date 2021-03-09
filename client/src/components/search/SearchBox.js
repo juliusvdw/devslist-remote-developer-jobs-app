@@ -57,7 +57,7 @@ const SearchBox = (props) => {
               ></input>
             </div>
 
-            <div className="mr-auto">
+            <div className="mr-auto d-none d-md-block">
               <button
                 className="btn btn-outline-primary ml-4 "
                 type="submit"
@@ -95,7 +95,7 @@ const SearchBox = (props) => {
 };
 
 const inputStyle = {
-  minWidth: "450px",
+  width: "420px",
 };
 const searchStyle = {
   border: "none",
