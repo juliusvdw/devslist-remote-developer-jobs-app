@@ -148,4 +148,12 @@ p {
   .searh-input {
     width: 100%;
   }
+
+  .company-name {
+    font-size: 12px !important;
+  }
+
+  .job-title {
+    font-size: 14px !important;
+  }
 }
