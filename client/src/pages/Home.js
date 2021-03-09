@@ -52,8 +52,8 @@ const Home = (props) => {
       <section style={jobSectionBackgroundStyle} className="pt-2">
         <div className="container " style={jobSectionStyle}>
           <div className="row w-100 ">
-            <div className="col-lg-5 col-sm-12 mx-auto">
-              <div style={jobsLeftContainerStyle}>
+            <div className="col-lg-5  col-sm-12 ">
+              <div style={jobsLeftContainerStyle} className="mx-auto">
                 <Jobs style={jobsLeftStyle} />
               </div>
             </div>
@@ -107,12 +107,13 @@ const jobSectionBackgroundStyle = {
 };
 
 const jobsLeftStyle = {
-  padding: "30px !important",
+  padding: "",
 };
 
 const jobsLeftContainerStyle = {
   height: " 80vh ",
   width: "100%",
+  padding: "0px ",
 };
 const jobsRightContainerStyle = {
   overflow: "auto",

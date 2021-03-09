@@ -57,6 +57,7 @@ const cardStyle = {
   padding: "0px",
   overflow: "auto",
   maxHeight: "100%",
+  width: "100%",
 };
 
 export default Jobs;

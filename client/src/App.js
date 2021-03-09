@@ -57,13 +57,8 @@ function App(props) {
                   />
                   <Route
                     exact
-                    path={"/jobs"}
-                    render={(props) => (
-                      <JobsPage
-                        {...props}
-                        setContactModalShow={setContactModalShow}
-                      />
-                    )}
+                    path={"/job"}
+                    render={(props) => <JobsPage {...props} />}
                   />
                 </Switch>
 

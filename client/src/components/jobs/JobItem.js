@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
-import Accordion from "react-bootstrap/Accordion";
-import Card from "react-bootstrap/Card";
-import Button from "react-bootstrap/Button";
+import { Link } from "react-router-dom";
+import { useMediaQuery } from "react-responsive";
 
 import JobContext from "../../context/jobs/jobContext";
 
@@ -10,8 +9,12 @@ const JobItem = ({ job }) => {
   const { setActiveJob, activeJob } = jobContext;
   let { link, title, categories, date, description, company, source, id } = job;
 
-  //manipulate categories display
+  //Declare var to determine if iser is on mobile device
+  const isMobileDevice = useMediaQuery({
+    query: "(max-device-width: 991px)",
+  });
 
+  //manipulate categories display
   categories = categories.map((cat) => {
     return (
       <span
@@ -61,38 +64,77 @@ const JobItem = ({ job }) => {
 
   //Add class selected-job to selected job
 
-  return (
-    <div
-      style={jobStyle}
-      className={`single-job ${
-        activeJob != null && activeJob.id == id ? "selected-job" : ""
-      }`}
-      onClick={() => setActiveJob(id)}
-    >
-      <div className="card-top d-flex">
+  //Return jobItem with job page link if on mobile device, else retrun jobItem with no link
+
+  if (isMobileDevice) {
+    return (
+      <Link to="/job" style={{ textDecoration: "none", color: "inherit" }}>
         <div
-          style={companyLetterStyle}
-          className="p-2 text-center d-none d-md-block"
+          style={jobStyle}
+          className={`single-job ${
+            activeJob != null && activeJob.id == id ? "selected-job" : ""
+          }`}
+          onClick={() => setActiveJob(id)}
         >
-          <h6>{imageLetters}</h6>
+          <div className="card-top d-flex">
+            <div
+              style={companyLetterStyle}
+              className="p-2 text-center d-none d-md-block"
+            >
+              <h6>{imageLetters}</h6>
+            </div>
+            <h6 className="p-2 company-name" style={companyTitleStyle}>
+              {company}
+            </h6>
+            <h6 className="p-2 job-date" style={dateStyle}>
+              {date}
+            </h6>
+          </div>
+
+          <div className="card-title mt-2 mb-2 ">
+            <h5 className="job-title" style={titleStyle}>
+              {title}
+            </h5>
+          </div>
+
+          <div className="categories mb-3 mt-3">{categories.slice(0, 3)}</div>
         </div>
-        <h6 className="p-2 company-name" style={companyTitleStyle}>
-          {company}
-        </h6>
-        <h6 className="p-2 job-date" style={dateStyle}>
-          {date}
-        </h6>
-      </div>
+      </Link>
+    );
+  } else {
+    return (
+      <div
+        style={jobStyle}
+        className={`single-job ${
+          activeJob != null && activeJob.id == id ? "selected-job" : ""
+        }`}
+        onClick={() => setActiveJob(id)}
+      >
+        <div className="card-top d-flex">
+          <div
+            style={companyLetterStyle}
+            className="p-2 text-center d-none d-md-block"
+          >
+            <h6>{imageLetters}</h6>
+          </div>
+          <h6 className="p-2 company-name" style={companyTitleStyle}>
+            {company}
+          </h6>
+          <h6 className="p-2 job-date" style={dateStyle}>
+            {date}
+          </h6>
+        </div>
 
-      <div className="card-title mt-2 mb-2 ">
-        <h5 className="job-title" style={titleStyle}>
-          {title}
-        </h5>
-      </div>
+        <div className="card-title mt-2 mb-2 ">
+          <h5 className="job-title" style={titleStyle}>
+            {title}
+          </h5>
+        </div>
 
-      <div className="categories mb-3 mt-3">{categories.slice(0, 3)}</div>
-    </div>
-  );
+        <div className="categories mb-3 mt-3">{categories.slice(0, 3)}</div>
+      </div>
+    );
+  }
 };
 
 const imageStyle = {
