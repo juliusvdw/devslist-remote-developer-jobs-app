@@ -29,8 +29,7 @@ p {
 .browse-btn:hover {
   transform: scale(1.05);
 }
-.nav-link {
-}
+
 .nav-link:hover {
   color: black;
 
