@@ -137,23 +137,6 @@ const JobItem = ({ job }) => {
   }
 };
 
-const imageStyle = {
-  height: "100%",
-  width: "100px",
-  backgroundColor: "white",
-  paddingTop: "26px",
-};
-
-const cardStyle = {
-  backgroundColor: "#ffff",
-};
-
-const btnStyle = {
-  width: "120px",
-  backgroundColor: "#b666d2",
-  border: "1px solid #b666d2",
-};
-
 const jobStyle = {
   paddingTop: "20px",
   paddingBottom: "20px",
