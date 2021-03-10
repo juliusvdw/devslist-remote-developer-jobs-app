@@ -8,7 +8,7 @@ import {
 } from "react-router-dom";
 import "./App.css";
 import Home from "./pages/Home";
-import JobsPage from "./pages/JobsPage";
+import JobDetailsMobile from "./pages/JobDetailsMobile";
 import Navbar from "./components/layout/Navbar";
 import Footer from "./components/layout/Footer";
 import ContactModal from "./components/modals/ContactModal";
@@ -58,7 +58,7 @@ function App(props) {
                   <Route
                     exact
                     path={"/job"}
-                    render={(props) => <JobsPage {...props} />}
+                    render={(props) => <JobDetailsMobile {...props} />}
                   />
                 </Switch>
 
