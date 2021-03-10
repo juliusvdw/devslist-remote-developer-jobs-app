@@ -47,6 +47,12 @@ const JobDetails = () => {
 
         <div className="job-categories">{categories}</div>
 
+        <a href={activeJob.link} target="__blank">
+          <button className="btn btn-outline-primary mt-4 " style={btnStyle}>
+            Apply
+          </button>
+        </a>
+
         <hr className="mt-4 mb-4" />
 
         <div
@@ -99,4 +105,9 @@ const companyRowStyle = {
 const companyStyle = {
   fontSize: "14px ",
 };
+
+const btnStyle = {
+  width: "150px",
+};
+
 export default JobDetails;

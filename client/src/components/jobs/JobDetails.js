@@ -8,11 +8,13 @@ const JobDetails = () => {
 
   const { activeJob, jobLoading } = jobContext;
 
-  //manipulate categories display
+  console.log(activeJob);
+
+  //manipulate categories display and get link from activejob
 
   let categories;
 
-  if (activeJob != null)
+  if (activeJob != null) {
     categories = activeJob.categories.map((cat) => {
       return (
         <span
@@ -24,6 +26,7 @@ const JobDetails = () => {
         </span>
       );
     });
+  }
 
   return (jobLoading == false) & (activeJob != null) ? (
     <div className="container " style={containerStyle}>
@@ -44,7 +47,13 @@ const JobDetails = () => {
         </h6>
       </div>
 
-      <div className="job-categories">{categories}</div>
+      <div className="job-categories  mt-4">{categories} </div>
+
+      <a href={activeJob.link} target="__blank">
+        <button className="btn btn-outline-primary mt-4" style={btnStyle}>
+          Apply
+        </button>
+      </a>
 
       <hr className="mt-4 mb-4" />
 
@@ -88,5 +97,9 @@ const categoriesStyle = {
 
 const companyRowStyle = {
   marginTop: "35px",
+};
+
+const btnStyle = {
+  width: "150px",
 };
 export default JobDetails;
