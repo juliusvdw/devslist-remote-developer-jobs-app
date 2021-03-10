@@ -51,8 +51,8 @@ const Home = (props) => {
 
       <section style={jobSectionBackgroundStyle} className="pt-2">
         <div className="container " style={jobSectionStyle}>
-          <div className="row w-100 ">
-            <div className="col-lg-5  col-sm-12 ">
+          <div className="row w-100 m-0">
+            <div className="col-lg-5  col-sm-12 jobs-left-col">
               <div style={jobsLeftContainerStyle} className="mx-auto">
                 <Jobs style={jobsLeftStyle} />
               </div>

@@ -155,4 +155,8 @@ p {
   .job-title {
     font-size: 14px !important;
   }
+
+  .jobs-left-col {
+    padding: 0px !important;
+  }
 }
