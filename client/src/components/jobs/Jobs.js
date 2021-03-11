@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import JobItem from "./JobItem";
 import Button from "react-bootstrap/Button";
-import Loading from "../layout/Loading";
+import JobsLoading from "./JobsLoading";
 import JobContext from "../../context/jobs/jobContext";
 
 const Jobs = () => {
@@ -11,7 +11,7 @@ const Jobs = () => {
   if (loading === true) {
     return (
       <div className="text-center">
-        <Loading />
+        <JobsLoading />
       </div>
     );
   }

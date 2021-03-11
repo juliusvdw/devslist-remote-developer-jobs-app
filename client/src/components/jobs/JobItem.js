@@ -6,7 +6,7 @@ import JobContext from "../../context/jobs/jobContext";
 
 const JobItem = ({ job }) => {
   const jobContext = useContext(JobContext);
-  const { setActiveJob, activeJob } = jobContext;
+  const { setActiveJob, activeJob, loading } = jobContext;
   let { link, title, categories, date, description, company, source, id } = job;
 
   //Declare var to determine if iser is on mobile device
@@ -61,8 +61,6 @@ const JobItem = ({ job }) => {
 
     date = ` ${date[1]}/ ${date[2]}`;
   }
-
-  //Add class selected-job to selected job
 
   //Return jobItem with job page link if on mobile device, else retrun jobItem with no link
 
