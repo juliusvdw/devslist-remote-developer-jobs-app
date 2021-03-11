@@ -1,6 +1,5 @@
 import React, { useContext } from "react";
 import MobileSkeletonLoader from "../components/MobileSkeletonLoader";
-import { useMediaQuery } from "react-responsive";
 
 import JobContext from "../context/jobs/jobContext";
 
