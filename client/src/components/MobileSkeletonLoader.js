@@ -30,7 +30,7 @@ const MobileSkeletonLoader = (props) => {
         <rect x="4" y="349" rx="3" ry="3" width="320" height="30" />
         <rect x="4" y="394" rx="3" ry="3" width="320" height="30" />
         <rect x="4" y="438" rx="3" ry="3" width="320" height="30" />
-        <rect x="4" y="320" rx="3" ry="3" width="320" height="30" />
+        <rect x="4" y="484" rx="3" ry="3" width="320" height="30" />
         <rect x="4" y="523" rx="3" ry="3" width="320" height="30" />
         <rect x="4" y="569" rx="3" ry="3" width="320" height="30" />
         <rect x="4" y="615" rx="3" ry="3" width="320" height="30" />
@@ -59,7 +59,7 @@ const MobileSkeletonLoader = (props) => {
         <rect x="4" y="349" rx="3" ry="3" width="650" height="30" />
         <rect x="4" y="394" rx="3" ry="3" width="650" height="30" />
         <rect x="4" y="438" rx="3" ry="3" width="650" height="30" />
-        <rect x="4" y="450" rx="3" ry="3" width="650" height="30" />
+        <rect x="4" y="483" rx="3" ry="3" width="650" height="30" />
         <rect x="4" y="523" rx="3" ry="3" width="650" height="30" />
         <rect x="4" y="569" rx="3" ry="3" width="650" height="30" />
         <rect x="4" y="615" rx="3" ry="3" width="650" height="30" />
@@ -71,6 +71,7 @@ const MobileSkeletonLoader = (props) => {
 
 const containerStyle = {
   padding: "40px",
+  paddingTop: "10px",
 };
 
 export default MobileSkeletonLoader;
