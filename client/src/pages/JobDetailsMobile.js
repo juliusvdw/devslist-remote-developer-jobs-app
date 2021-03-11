@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
-import SkeletonLoader from "../components/SkeletonLoader";
+import MobileSkeletonLoader from "../components/MobileSkeletonLoader";
+import { useMediaQuery } from "react-responsive";
 
 import JobContext from "../context/jobs/jobContext";
 
@@ -63,7 +64,7 @@ const JobDetails = () => {
     </div>
   ) : (
     <div style={{ marginTop: "46px" }}>
-      <SkeletonLoader />
+      <MobileSkeletonLoader />
     </div>
   );
 };
