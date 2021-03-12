@@ -25,7 +25,7 @@ const Navbar = ({ setContactModalShow, setPostModalShow }) => {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav mr-auto" style={ulStyle}>
             <li className="nav-item mr-4">
-              <Link className="nav-link text-dark" to="/jobs">
+              <Link className="nav-link text-dark" to="/">
                 Jobs
               </Link>
             </li>
