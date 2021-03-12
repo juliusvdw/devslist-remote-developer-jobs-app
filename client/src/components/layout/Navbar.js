@@ -29,20 +29,7 @@ const Navbar = ({ setContactModalShow, setPostModalShow }) => {
                 Jobs
               </Link>
             </li>
-            <li className="nav-item dropdown mr-4">
-              <a
-                className="nav-link  text-dark"
-                href="#"
-                id="navbarDropdown"
-                role="button"
-                data-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="false"
-                href="#"
-              >
-                Join
-              </a>
-            </li>
+
             <li className="nav-item">
               <a
                 className="nav-link text-dark"
