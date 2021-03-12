@@ -39,7 +39,7 @@ const ContactModal = (props) => {
   return (
     <Modal
       {...props}
-      size="lg"
+      size="md"
       aria-labelledby="contained-modal-title-vcenter"
       centered
       animation
@@ -52,8 +52,9 @@ const ContactModal = (props) => {
         </Modal.Header>
         <Modal.Body>
           {mailSuccess !== null && <div className="text-center"> {alert}</div>}
-          <h4 className="mt-1 ">Name</h4>
+          {/* <h4 className="mt-1 ">Name</h4> */}
           <input
+            style={inputStyle}
             type="text"
             placeholder="Name..."
             className="form-control"
@@ -61,19 +62,21 @@ const ContactModal = (props) => {
             name="name"
             onChange={(e) => setContactName(e.target.value)}
           />
-          <h4 className="mt-4 ">Email </h4>
+          {/* <h4 className="mt-4 ">Email </h4> */}
           <input
+            style={inputStyle}
             type="email"
             placeholder="Email..."
-            className="form-control"
+            className="form-control mt-4"
             value={contactEmail}
             name="email"
             onChange={(e) => setContactEmail(e.target.value)}
             required
           />
-          <h4 className="mt-4 ">Message</h4>
+          {/* <h4 className="mt-4 ">Message</h4> */}
           <textarea
-            className="form-control"
+            placeholder="Enter Message..."
+            className="form-control mt-4"
             style={{ minHeight: "150px" }}
             value={contactMessage}
             name="msg"
@@ -82,16 +85,22 @@ const ContactModal = (props) => {
           />
         </Modal.Body>
         <Modal.Footer>
-          <Button type="submit">
+          <button className="btn btn-outline-primary" type="submit">
             <strong>Send</strong>
-          </Button>
-          <Button onClick={props.onHide}>
+          </button>
+          <button className="btn btn-outline-danger" onClick={props.onHide}>
             <strong>Close</strong>
-          </Button>
+          </button>
         </Modal.Footer>
       </form>
     </Modal>
   );
+};
+
+const inputStyle = {
+  border: " none",
+  borderBottom: "1px solid black",
+  borderRadius: "0px",
 };
 
 export default ContactModal;

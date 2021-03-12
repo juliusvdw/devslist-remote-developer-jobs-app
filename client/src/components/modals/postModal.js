@@ -13,12 +13,12 @@ const ContactModal = (props) => {
       animation
     >
       <Modal.Body>
-        <h2 className="text-center">This feature will be available shortly!</h2>
+        <h4 className="text-center">This feature will be available shortly!</h4>
       </Modal.Body>
       <Modal.Footer>
-        <Button onClick={props.onHide}>
+        <button className="btn btn-outline-primary " onClick={props.onHide}>
           <strong>Close</strong>
-        </Button>
+        </button>
       </Modal.Footer>
     </Modal>
   );
