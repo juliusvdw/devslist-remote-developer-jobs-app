@@ -8,6 +8,8 @@ const sendMail = require("./workers/sendMail");
 //bring in required models
 const Job = require("./models/Job");
 
+
+
 //connect to mongodb
 connectDB();
 
@@ -15,18 +17,25 @@ connectDB();
 app.use(cors());
 app.use(express.json());
 
-app.use(express.static(path.join(__dirname, "/client/build")));
+//set app.use
+app.use(cors());
+app.use(express.json());
+
 
 //Create route to retrieve jobs
 app.get("/api/jobs", async (req, res) => {
+
+  
   try {
     let jobs;
 
     if (req.query.limit) {
+      console.log('fetching jobs with limit')
       jobs = await Job.find({})
         .lean()
         .limit(Number(req.query.limit))
         .sort("-date");
+
     }
     if (req.query.category) {
       jobs = await Job.find({
@@ -37,7 +46,9 @@ app.get("/api/jobs", async (req, res) => {
         .sort("-date");
     }
     if (req.query.all) {
+      console.log('fetching all jobs')
       jobs = await Job.find({}).lean().limit(400).sort("-date");
+      console.log(jobs)
     }
 
     if (req.query.skip) {
@@ -68,10 +79,7 @@ app.post("/api/contact", async (req, res) => {
   }
 });
 
-app.get("/*", (req, res) => {
-  res.sendFile(path.join(__dirname, "/client/build/index.html"));
-});
 
 const PORT = process.env.PORT || 8080;
 
-app.listen(PORT, () => console.log("server started "));
+app.listen(5000, () => console.log("server started "));
