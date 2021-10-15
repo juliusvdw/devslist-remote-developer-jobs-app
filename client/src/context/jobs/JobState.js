@@ -50,9 +50,10 @@ const JobState = (props) => {
   const getHomePageJobs = async () => {
     try {
       const data = await axios.get(
-        "https://devslistjules.uk.r.appspot.com/api/jobs?limit=30"
+        "/api/jobs?limit=30"
       );
       const jobs = data.data.jobs;
+      console.log(data)
 
       dispatch({ type: GET_HOMEPAGE_JOBS, payload: jobs });
     } catch (err) {
@@ -66,7 +67,7 @@ const JobState = (props) => {
 
     try {
       const data = await axios.get(
-        `https://devslistjules.uk.r.appspot.com/api/jobs?category=${query}`
+        `/api/jobs?category=${query}`
       );
       const jobs = data.data.jobs;
       console.log(jobs);
@@ -86,10 +87,10 @@ const JobState = (props) => {
       setLoading();
       try {
         const data = await axios.get(
-          `https://devslistjules.uk.r.appspot.com/api/jobs?all=true`
+          `/api/jobs?all=true`
         );
         const jobs = await data.data.jobs;
-
+         
         dispatch({ type: SET_ALL_JOBS });
 
         console.log(jobs);
@@ -111,7 +112,7 @@ const JobState = (props) => {
   const allJobsSkip = async (skipAmount) => {
     try {
       const data = await axios.get(
-        `https://devslistjules.uk.r.appspot.com/api/jobs?skip=${skipAmount}`
+        `/api/jobs?skip=${skipAmount}`
       );
       const jobs = await data.data.jobs;
       dispatch({ type: "ALL_JOBS_SKIP", payload: jobs });
@@ -124,7 +125,7 @@ const JobState = (props) => {
   const addHomeJobs = async (skipAmount) => {
     try {
       const data = await axios.get(
-        `https://devslistjules.uk.r.appspot.com/api/jobs?skip=${skipAmount}`
+        `/api/jobs?skip=${skipAmount}`
       );
       const jobs = await data.data.jobs;
       dispatch({ type: ADD_HOME_JOBS, payload: jobs });
