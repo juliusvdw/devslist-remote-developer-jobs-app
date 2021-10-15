@@ -93,12 +93,12 @@ const JobState = (props) => {
         dispatch({ type: SET_ALL_JOBS });
 
         console.log(jobs);
-        await dispatch({
+         dispatch({
           type: GET_ALL_JOBS,
           payload: jobs,
         });
 
-        await dispatch({ type: SET_ACTIVE_JOB, payload: jobs[0] });
+         dispatch({ type: SET_ACTIVE_JOB, payload: jobs[0] });
         clearLoading();
       } catch (err) {
         console.log(err.message);
