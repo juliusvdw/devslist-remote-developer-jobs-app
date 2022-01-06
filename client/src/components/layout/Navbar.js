@@ -5,14 +5,14 @@ const Navbar = ({ setContactModalShow, setPostModalShow }) => {
   return (
     <div>
       <nav
-        className="navbar navbar-expand-lg navbar-light fixed-top  px-0"
+        className="navbar navbar-expand-lg container navbar-light   "
         style={navbarStyle}
       >
         <Link className="navbar-brand text-dark" to="/" style={logoStyle}>
           devslist
         </Link>
         <button
-          className="navbar-toggler"
+          className="navbar-toggler d-none"
           type="button"
           data-toggle="collapse"
           data-target="#navbarNav"
@@ -25,14 +25,14 @@ const Navbar = ({ setContactModalShow, setPostModalShow }) => {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav mr-auto" style={ulStyle}>
             <li className="nav-item mr-4">
-              <Link className="nav-link text-dark" to="/">
+              <Link className="nav-link text-dark d-none" to="/">
                 Jobs
               </Link>
             </li>
 
             <li className="nav-item">
               <a
-                className="nav-link text-dark"
+                className="nav-link text-dark d-none"
                 href="#"
                 onClick={() => setContactModalShow(true)}
               >
@@ -42,7 +42,7 @@ const Navbar = ({ setContactModalShow, setPostModalShow }) => {
           </ul>
 
           <a
-            className="nav-link btn btn-outline-primary mt-1 nav-btn ml-auto"
+            className="nav-link btn btn-outline-primary mt-1 nav-btn ml-auto d-none"
             href="#"
             onClick={() => setPostModalShow(true)}
             style={btnStyle}
@@ -72,7 +72,6 @@ const ulStyle = {
 const logoStyle = {
   fontSize: "24px",
   fontWeight: "bold",
-  marginLeft: "5%",
 };
 
 const btnStyle = {
